@@ -58,7 +58,7 @@ jobs:
           stack_file_name: docker-compose.yaml
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull ebudaev/yamdb_final:v1
+            sudo docker pull pako28/yamdb_final:v1
             sudo docker-compose stop
             sudo docker-compose rm web
             # Создаст файл для переменных окружения

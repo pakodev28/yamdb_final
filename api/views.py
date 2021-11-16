@@ -7,10 +7,8 @@ from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, permissions, status, viewsets
 from rest_framework.decorators import action
-from rest_framework.pagination import (
-    LimitOffsetPagination,
-    PageNumberPagination,
-)
+from rest_framework.pagination import (LimitOffsetPagination,
+                                       PageNumberPagination)
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -22,18 +20,11 @@ from media_content.models import Category, Genre, Title
 from reviews.models import Review
 
 from .filters import FilterTitle
-from .permissions import AdminOrReadOnly, IsAuthorOrStaff, IsAdmin
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    SignUpSerializer,
-    TitleCreateUpdateSerializer,
-    TitleGetSerializer,
-    TokenSerializer,
-    UserSerializer,
-)
+from .permissions import AdminOrReadOnly, IsAdmin, IsAuthorOrStaff
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer, SignUpSerializer,
+                          TitleCreateUpdateSerializer, TitleGetSerializer,
+                          TokenSerializer, UserSerializer)
 
 User = get_user_model()
 

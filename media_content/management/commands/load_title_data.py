@@ -1,6 +1,8 @@
 import csv
+
 from django.core.management.base import BaseCommand
-from media_content.models import Title, Category
+
+from media_content.models import Category, Title
 
 
 class Command(BaseCommand):

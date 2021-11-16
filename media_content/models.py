@@ -1,7 +1,8 @@
 import datetime
-from django.db import models
-from django.core.validators import MaxValueValidator
+
 from django.contrib.auth import get_user_model
+from django.core.validators import MaxValueValidator
+from django.db import models
 
 User = get_user_model()
 

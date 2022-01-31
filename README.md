@@ -1,5 +1,7 @@
 ![yamdb_workflow](https://github.com/pakodev28/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
 
+**Учебный Командный проект выполненный в рамках курса "Python-разработчик" от Яндекс.Практикум**
+
 # Описание сервиса:
 ### *Как Кинопоиск, толко хуже :)*
 ### API для сервиса, который собирает отзывы на произведения искусства:
@@ -37,51 +39,49 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-Установить зависимости из файла requirements.txt:
-
+Для запуска контейнеров:
 ```
-python3 -m pip install --upgrade pip
+docker-compose up -d
 ```
-
+Далее выполните следующие команды:
 ```
-pip install -r requirements.txt
+docker-compose exec web python manage.py migrate --noinput
 ```
-
-Выполнить миграции:
-
 ```
-python3 manage.py migrate
+docker-compose exec web python manage.py collectstatic
 ```
-
-
+Создайте суперпользователя:
+```
+docker-compose exec web python manage.py createsuperuser
+```
 ## Команды для загрузки данных из csv в базу данных:
 
 загрузить категории
 ```
-python3 manage.py load_category_data
+docker-compose exec web python manage.py load_category_data
 ```
 загрузить жанры
 ```
-python3 manage.py load_genre_data
+docker-compose exec web python manage.py load_genre_data
 ```
 загрузить тайтлы
 ```
-python3 manage.py load_title_data
+docker-compose exec web python manage.py load_title_data
 ```
 ```
-python3 manage.py load_genre_title_data
+docker-compose exec web python manage.py load_genre_title_data
 ```
 загрузить отзывы
 ```
-python3 manage.py load_review_data
+docker-compose exec web python manage.py load_review_data
 ```
 загрузить коментарии
 ```
-python3 manage.py load_comments_data
+docker-compose exec web python manage.py load_comments_data
 ```
 загрузить пользователей
 ```
-python3 manage.py load_users_data
+docker-compose exec web python manage.py load_users_data
 ```
 
 ## Подробную документацию с примерами запросов вы найдете по адресу

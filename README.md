@@ -1,4 +1,6 @@
 ![yamdb_workflow](https://github.com/pakodev28/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
+![django version](https://img.shields.io/badge/Django-3.1.13-green)
+![python version](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-green)
 
 **Учебный Командный проект выполненный в рамках курса "Python-разработчик" от Яндекс.Практикум**
 

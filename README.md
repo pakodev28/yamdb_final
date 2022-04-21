@@ -24,11 +24,11 @@
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone git@github.com:pakodev28/infra_sp2.git
+git clone git@github.com:pakodev28/yamdb_final.git
 ```
 
 ```
-cd api_final_yatube
+cd yamdb_final
 ```
 
 Cоздать и активировать виртуальное окружение:
